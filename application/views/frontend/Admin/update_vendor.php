@@ -3,7 +3,7 @@ $vendor_info = $this->db->get_where('vendor', array('id' => $param2))->result_ar
 foreach ($vendor_info as $row) {
 ?>
 
-   <form role="form" class="form-horizontal" action="<?php echo base_url(); ?>admin/vendor/update/<?=$row['id']; ?>" method="post" enctype="multipart/form-data">
+ <form role="form" class="form-horizontal" action="<?php echo base_url(); ?>admin/vendor/update/<?=$row['id']; ?>" method="post" enctype="multipart/form-data">
 		<div class="form-group">
       <div class="row">
         <label for="field-1" class="col-md-4 control-label">ID:</label>
@@ -54,6 +54,7 @@ foreach ($vendor_info as $row) {
 		</div>
 		<div class="form-group">
 			<div class="col-md-12n pull-right" style="margin:5px 15px;">
+
 				<button type="submit" class="btn btn-success">
 					<span class="fa fa-plus"> Update</span>
 				</button>

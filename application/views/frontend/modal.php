@@ -33,7 +33,7 @@
 				
                 </div>
 				<div class="modal-footer">
-					StratumWorld Resources App, 2021.
+					Strathmore University Medical Center
 				</div>
             </div>
         </div>

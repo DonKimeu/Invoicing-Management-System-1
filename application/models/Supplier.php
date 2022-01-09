@@ -17,7 +17,7 @@ class Supplier extends CI_Model {
           'phone'  => $this->input->post('phone'),
           'product'  => $this->input->post('product'),
           'total'  => $this->input->post('total'),
-          'vat'  => $this->input->post('vat'),
+        //  'vat'  => $this->input->post('vat'),
           'amount_paid'  => $this->input->post('amount_paid'),
           'payment_date'  => $this->input->post('payment_date')
         );

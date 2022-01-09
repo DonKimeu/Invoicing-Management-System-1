@@ -79,8 +79,8 @@
 				<td><?=$row["id"] ?></td>
 				<td><?=$row["name"] ?></td>
 				<td><?=$row["phone"] ?></td>
-				<td>&#8358;<?=number_format($row["debt"], 2, '.', ',') ?></td>
-				<td>&#8358;<?=number_format($row["credit_limit"], 2, '.', ',') ?></td>
+				<td><?=number_format($row["debt"], 2, '.', ',') ?></td>
+				<td><?=number_format($row["credit_limit"], 2, '.', ',') ?></td>
 				<td class="text-center">
 					<a onclick="showAjaxModal('<?= base_url();?>modal/popup/update_vendor/<?= $row["id"]?>');"
 					  class="edit-vendor btn btn-info btn-sm">
@@ -121,7 +121,7 @@
 	$(document).ready(function(){
 		//Edit Vendor
 		$(document).on('click', '.edit-vendor', function() {
-			$('.modal-title').text('Update Vendor Information');
+		$('.modal-title').text('Update Vendor Information');
 			$('.form-horizontal').show();
 		});
 	});

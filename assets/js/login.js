@@ -28,11 +28,12 @@ $(document).ready(function () {
 								element.closest('.form-group')
 								.removeClass('has-error')
 								.removeClass('has-success')
-								.addClass(value.length > 0 ? 'has-error' : 'has-success')//check value lenght
+								.addClass(value.length > 0 ? 'has-error' : 'has-success')//check value length
 								.find('.text-danger')
 								.remove();
 								//assign the form_error field after the element
 								element.after(value);
+
 							});
 						}
 						else {						
@@ -42,6 +43,7 @@ $(document).ready(function () {
 
 							$(".text-danger").remove();
 							$(".form-group").removeClass('has-error').removeClass('has-success');
+
 						}
                     }
                 }

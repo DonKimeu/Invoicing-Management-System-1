@@ -18,7 +18,7 @@
 	<!-- /.col-lg-12 -->
 </div>
 <div class="container-fluid">
-      <h4 align="center" class="animated fadeInDown">STRATUMWORLD RESOURCES LIMITED</h4><br/>
+      <h4 align="center" class="animated fadeInDown">STRATHMORE UNIVERSITY MEDICAL CENTER</h4><br/>
       <br />
 	  <div align="right">
         <a href="#" class="create-supplier btn btn-primary btn-md">CREATE</a>
@@ -31,7 +31,7 @@
             <th>Name</th>
             <th>Product</th>
             <th>Total</th>
-            <th>VAT</th>
+			  <!--  <th>VAT</th> -->
 			<th>Paid</th>
 			<th>Balance</th>
 			<th>Show</th>
@@ -50,10 +50,11 @@
 					<td><?=$no++ ?></td>
 					<td><?=$row["name"]?></td>
 					<td><?=$row["product"]?></td>
-					<td>&#8358;<?=number_format($row["total"], 2, '.', ',')?></td>
-					<td>&#8358;<?=number_format($row["vat"], 2, '.', ',')?></td>
-					<td>&#8358;<?=number_format($row["amount_paid"], 2, '.', ',')?></td>
-					<td>&#8358;<?=number_format($row["amount_paid"] - $row["total"], 2, '.', ',')?></td>
+					<td><?=number_format($row["total"], 2, '.', ',')?></td>
+					  <!--<td>&#8358;<?=number_format($row["vat"], 2, '.', ',')?></td>
+					&#8358;-->
+					<td><?=number_format($row["amount_paid"], 2, '.', ',')?></td>
+					<td><?=number_format($row["amount_paid"] - $row["total"], 2, '.', ',')?></td>
 					<td class="text-center">
 						<a href="#" class="show-supplier btn btn-info btn-sm"
 							data-id="<?=$row['id']?>"
@@ -62,7 +63,7 @@
 							data-phone="<?=$row['phone']?>"
 							data-product="<?=$row['product']?>"
                             data-total="<?=$row['total']?>"
-                            data-vat="<?=$row['vat']?>"
+
 							data-paid="<?=$row['amount_paid']?>"
 							data-balance="<?=$row["amount_paid"] - $row["total"]?>">
 					<i class="fa fa-eye"></i>
@@ -116,31 +117,31 @@
 			    <label class="col-md-4" for="">Total:</label>
 				&#8358; <span id="s-total"></span>
             </div>
-			<div class="form-group">
-			    <label class="col-md-4" for="s-vat">VAT:</label>
-				&#8358; <span id="s-vat"></span>
-            </div>
-			<div class="form-group">
-				<label class="col-md-4" for="">Amount Paid:</label>
-				&#8358; <span id="s-paid"></span>
+		  <!--	<div class="form-group">
+				  <label class="col-md-4" for="s-vat">VAT:</label>
+				  &#8358; <span id="s-vat"></span>
+			  </div> -->
+			  <div class="form-group">
+				  <label class="col-md-4" for="">Amount Paid:</label>
+				  &#8358; <span id="s-paid"></span>
+			  </div>
+			  <div class="form-group">
+				  <label class="col-md-4" for="">Balance:</label>
+				  &#8358; <span id="s-balance"></span>
+			  </div>
+			  <div class="form-group">
+				  <label class="col-md-4" for="">Phone:</label>
+				  <span id="s-phone"></span>
+			  </div>
+			  </div>
+			  <div class="modal-footer">
+				  Strathmore University Medical Center
 			</div>
-			<div class="form-group">
-				<label class="col-md-4" for="">Balance:</label>
-				&#8358; <span id="s-balance"></span>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4" for="">Phone:</label>
-				<span id="s-phone"></span>
-			</div>
-            </div>
-			<div class="modal-footer">
-				StratumWorld Resources App, 2021
-		  </div>
-         </div>
-    </div>
-</div>
+		   </div>
+	  </div>
+  </div>
 
-<!-- Modal Form Create photo -->
+  <!-- Modal Form Create photo -->
 <div id="create" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -188,11 +189,11 @@
 					</div>
                 </div>
 				<div class="form-group">
-					<div class="row">
-						<label class="control-label col-md-4" for="body">VAT:</label>
-						<div class="col-md-8">
-							<input name="vat" id="vat" type="number" class="form-control" required/>
-						</div>
+					 <div class="row">
+						 <!--  <label class="control-label col-md-4" for="body">VAT:</label>-->
+							<div class="col-md-8">
+								<!--  <input name="vat" id="vat" type="number" class="form-control" required/>
+						   </div>-->
 					</div>
                 </div>
 				
@@ -226,7 +227,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-					StratumWorld Resources App, 2021.
+					Strathmore Medical Center
 			  </div>
         </div>
     </div>
@@ -271,7 +272,7 @@
             $('#s-date').text($(this).data('date'));
             $('#s-name').text($(this).data('name'));
             $('#s-total').text($(this).data('total').toLocaleString('en-US'));
-            $('#s-vat').text($(this).data('vat').toLocaleString('en-US'));
+         //   $('#s-vat').text($(this).data('vat').toLocaleString('en-US'));
 			$('#s-paid').text($(this).data('paid').toLocaleString('en-US'));
 			$('#s-balance').text($(this).data('balance').toLocaleString('en-US'));
 			$('#s-phone').text($(this).data('phone'));

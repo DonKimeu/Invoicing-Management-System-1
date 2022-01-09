@@ -19,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The auto-detection mechanism exists only for convenience during
 | development and MUST NOT be used in production!
 |
+
 | If you need to allow multiple domains, remember that this file is still
 | a PHP script and you can easily do that on your own.
 |

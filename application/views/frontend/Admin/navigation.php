@@ -44,19 +44,19 @@
 			</a>
 			<div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
 				<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-					<a class="nav-link <?=($page_name == 'icecream/ice_cream_sales_list') || ($page_name == 'icecream/items') || ($page_name == 'icecream/update_sales') || ($page_name == 'icecream/create_sales') ? 'active': ''; ?> collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-						Ice-cream
+					<a class="nav-link <?=($page_name == 'Medicine/ice_cream_sales_list') || ($page_name == 'Medicine/items') || ($page_name == 'Medicine/update_sales') || ($page_name == 'Medicine/create_sales') ? 'active': ''; ?> collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+						Medicine
 						<div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
 					</a>
 					<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link <?=($page_name == 'icecream/ice_cream_sales_list') ? 'active': ''; ?>" href="<?php echo base_url(); ?>admin/ice_cream">Order</a>
-							<a class="nav-link <?=($page_name == 'icecream/items') ? 'active': ''; ?>" href="<?php echo base_url(); ?>admin/ice_cream_items">Items</a>
+							<a class="nav-link <?=($page_name == 'icecream/ice_cream_sales_list') ? 'active': ''; ?>" href="<?php echo base_url(); ?>admin/ice_cream">Order Invoices</a>
+							<a class="nav-link <?=($page_name == 'icecream/items') ? 'active': ''; ?>" href="<?php echo base_url(); ?>admin/ice_cream_items">Items Sold</a>
 						</nav>
 					</div>
 					<a class="nav-link <?=($page_name == 'stationary/stationary_sales_list') || ($page_name == 'stationary/items') || ($page_name == 'stationary/update_sales') || ($page_name == 'stationary/create_sales')  ? 'active': ''; ?> collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-						Stationary
-						<div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
+						<!-- Medical Equipment -->
+						<!--	<div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>-->
 					</a>
 					<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
 						<nav class="sb-sidenav-menu-nested nav">

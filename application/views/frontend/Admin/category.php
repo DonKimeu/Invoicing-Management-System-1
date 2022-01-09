@@ -31,7 +31,7 @@
 	<!-- /.col-lg-12 -->
 </div>
 <div class="container-fluid">
-	<h4 align="center" class="animated fadeInDown">STRATUMWORLD RESOURCES LIMITED</h4><br/>
+	<h4 align="center" class="animated fadeInDown">STRATHMORE UNIVERSITY MEDICAL CENTER</h4><br/>
 	<br />
 	<div class="row">
 		<div class="col-md-12">
@@ -106,7 +106,7 @@
 			
 			</div>
 			<div class="modal-footer">
-				StratumWorld Resources App, 2021
+				Strathmore University Medical Center
 			</div>
 		</div>
     </div>
@@ -154,7 +154,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-					StratumWorld Resources App, 2021.
+					Strathmore University Medical Center
 			  </div>
         </div>
     </div>

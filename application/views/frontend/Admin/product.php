@@ -31,7 +31,7 @@
 	<!-- /.col-lg-12 -->
 </div>
 <div class="container-fluid">
-	<h4 align="center" class="animated fadeInDown">STRATUMWORLD RESOURCES LIMITED</h4><br/>
+	<h4 align="center" class="animated fadeInDown">Strathmore University Medical Center</h4><br/>
 	<br />
 	<div class="row">
 		<div class="col-md-12">
@@ -66,10 +66,10 @@
 						<td><?=$no++ ?></td>
 						<td><?=$row["product_name"]?></td>
 						<td><?=$row["description"]?></td>
-						<td style="<?=($row['quantity_in_stock']) > 3 ? 'background:#00ff23; color:#fff;': 'background:#B80F0A; color:#fff;' ?>"><?=$row["quantity_in_stock"]?></td>
+						<td style="<?=($row['quantity_in_stock']) > 5 ? 'background:#00ff23; color:#fff;': 'background:#B80F0A; color:#fff;' ?>"><?=$row["quantity_in_stock"]?></td>
 						<td><?=$row["quantity_sold"]?></td>
-						<td>&#8358;<?=number_format($row["unit_price"], 2, '.', ','); ?></td>
-						<td>&#8358;<?=number_format($row["selling_price"], 2, '.', ','); ?></td>
+						<td><?=number_format($row["unit_price"], 2, '.', ','); ?></td>
+						<tds<?=number_format($row["selling_price"], 2, '.', ','); ?></td>
 						<td class="text-center"><a href="#" class="show-product btn btn-info btn-sm"
 								data-id ="<?=$row['id']?>"
 								data-cat_id ="<?=$row['category_id']?>"
@@ -151,7 +151,7 @@
 			</div>
 			</div>
 			<div class="modal-footer">
-				StratumWorld Resources App, 2021
+				Strathmore University Medical Center
 			</div>
 		</div>
     </div>
@@ -249,7 +249,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-					StratumWorld Resources App, 2021.
+					Strathmore University Medical Center
 			  </div>
         </div>
     </div>
@@ -283,12 +283,12 @@
 	$(document).on('click','.create-product', function() {
 		$('#create-product').modal('show');
 		$('.form-horizontal').show();
-		$('.modal-title').text('Create New PRODUCT');
+		$('.modal-title').text('Create New Product');
 	});
 	
 	//Edit Product
 	$(document).on('click', '.edit-product', function() {
-		$('.modal-title').text('Update PRODUCT Information');
+		$('.modal-title').text('Update Product Information');
 		$('.form-horizontal').show();
 	});
 
@@ -305,6 +305,6 @@
 			$('#s-qtysold').text($(this).data('qtysold'));
 			$('#s-up').text($(this).data('up').toLocaleString('en-US'));
 			$('#s-sp').text($(this).data('sp').toLocaleString('en-US'));
-            $('.modal-title').text('PRODUCT Data Information');
+            $('.modal-title').text('Product Data Information');
         });
 </script>

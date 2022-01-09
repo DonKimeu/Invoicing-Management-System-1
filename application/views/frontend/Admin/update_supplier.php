@@ -53,12 +53,12 @@ foreach ($supplier_info as $row) {
 				</div>
 		   </div>
 		</div>
-		<div class="form-group">
+	   <!-- 	<div class="form-gro	up">
 		   <div class="row">
-			 <label class="col-md-4 control-label" for="field-ta">VAT</label>
+				 <label class="col-md-4 control-label" for="field-ta">VAT</label>
 				<div class="col-md-8">
-					<input type="text" class="form-control" name="vat" required value="<?=$row["vat"] ?>"/>
-				</div>
+			//		<input type="text" class="form-control" name="vat" required value="<?=$row["vat"] ?>"/>
+				</div> -->
 		   </div>
 		</div>
 	   <div class="form-group">

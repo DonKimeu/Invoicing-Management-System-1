@@ -60,8 +60,8 @@ class Admin extends CI_Controller {
             redirect(base_url('admin/ice_cream'), 'refresh');
         }
 
-        $data['page_name'] = 'icecream/ice_cream_sales_list';
-        $data['page_title'] = 'Manage-Ice-Cream';
+        $data['page_name'] = 'Medicine/ice_cream_sales_list';
+        $data['page_title'] = 'Manage-Medicine';
 	    $data['get_data'] = $this->db->get('ice_cream_sales')->result_array();
 	    $data['total_rows'] = $this->db->count_all('ice_cream_sales');
         $this->load->view('frontend/index', $data);
@@ -84,8 +84,8 @@ class Admin extends CI_Controller {
             redirect(base_url(), 'refresh');
         }
 
-        $data['page_name'] = 'icecream/items';
-        $data['page_title'] = 'Ice-Cream Sales List';
+        $data['page_name'] = 'Medicine/items';
+        $data['page_title'] = 'Medicine Sales List';
 	    $data['get_data'] = $this->db->get('ice_cream_sales_order')->result_array();
 	    $data['total_rows'] = $this->db->count_all('ice_cream_sales_order');
         $this->load->view('frontend/index', $data);
@@ -96,8 +96,8 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('login_type') != 'admin') {
             redirect(base_url(), 'refresh');
         }
-		$data['page_title'] = 'Manage-Ice-Cream';
-		$data['page_name'] = 'icecream/create_sales';
+		$data['page_title'] = 'Manage Medicine';
+		$data['page_name'] = 'Medicine/create_sales';
 		$data['get_product_array'] = $this->db->get('products')->result_array();
 		$data['category_list'] = $this->db->get('category')->result_array();
 		$data['total_product_rows'] = $this->db->count_all('products');
@@ -134,7 +134,7 @@ class Admin extends CI_Controller {
         }
 
         $data['page_name'] = 'stationary/stationary_sales_list';
-        $data['page_title'] = 'Manage-Stationary';
+        $data['page_title'] = 'Manage Medical Equipment';
 	    $data['get_data'] = $this->db->get('stationary_sales')->result_array();
 	    $data['total_rows'] = $this->db->count_all('stationary_sales');
         $this->load->view('frontend/index', $data);
@@ -169,7 +169,7 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('login_type') != 'admin') {
             redirect(base_url(), 'refresh');
         }
-		$data['page_title'] = 'Manage-Stationary';
+		$data['page_title'] = 'Manage Medical Equipment';
 		$data['page_name'] = 'stationary/create_sales';
 		$data['get_product_array'] = $this->db->get('products')->result_array();
 		$data['category_list'] = $this->db->get('category')->result_array();
@@ -184,10 +184,12 @@ class Admin extends CI_Controller {
 	function get_profit_margin() {
 		$ice_cream = $this->db->get('ice_cream_sales')->result_array();
 		$stationary = $this->db->get('stationary_sales')->result_array();
-		$vat = $this->db->get('supplier')->result_array();
+	//	$vat = $this->db->get('supplier')->result_array();
 		$data = array('response' => false);
-		if($stationary || $ice_cream || $vat){
-			$data['data'] = array('ice_cream' => $ice_cream, 'stationary' => $stationary, 'vat' => $vat);
+		if($stationary || $ice_cream){
+			//if($stationary || $ice_cream || $vat){
+			//$data['data'] = array('ice_cream' => $ice_cream, 'stationary' => $stationary, 'vat' => $vat);
+			$data['data'] = array('ice_cream' => $ice_cream, 'stationary' => $stationary);
 			$data['response'] = true;
 		}else {
 			$data['response'] = false;
@@ -276,7 +278,7 @@ class Admin extends CI_Controller {
         }
 
         $data['page_name'] = 'supplier';
-        $data['page_title'] = 'Manage-Supplier';
+        $data['page_title'] = 'Manage Supplier Orders Data';
 	    $data['get_supplier_data'] = $this->db->get('supplier')->result_array();
 		$data['total_rows'] = $this->db->count_all('supplier');
         $this->load->view('frontend/index', $data);
@@ -441,7 +443,7 @@ class Admin extends CI_Controller {
                 redirect(base_url() . 'admin/profile');
             }
         }
-        $data['page_title'] = 'Staff Profile';
+        $data['page_title'] = 'Users Profile';
         $data['page_name'] = 'manage_profile';
         $data['update_admin'] = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('id')))->result_array();
 	    $data['staff'] = $this->db->get_where('admin', array('role' => 'staff'))->result_array();
@@ -527,7 +529,7 @@ class Admin extends CI_Controller {
             }
         }
         $data['page_name'] = 'manage_profile';
-        $data['page_title'] = 'Staff Profile';
+        $data['page_title'] = 'Users Profile';
         $data['update_admin'] = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('id')))->result_array();
 	    $data['staff'] = $this->db->get_where('admin', array('role' => 'staff'))->result_array();
 		$data['total_rows'] = $this->db->count_all('admin');

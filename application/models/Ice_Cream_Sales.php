@@ -23,7 +23,7 @@ class Ice_Cream_Sales extends CI_Model {
 			  'balance'    				=>  trim($data["balance"]),
 			  'cash_paid'    			=>  trim($data["cash_paid"])
 			);
-		$q = $this->db->insert_string('ice_cream_sales', $data1);
+		$q = $this->db->insert_string('medicine_sales', $data1);
 		$this->db->query($q);
 		$sales_id = $this->db->insert_id();
 
@@ -44,7 +44,7 @@ class Ice_Cream_Sales extends CI_Model {
             'total_selling_price'    =>  trim($data["total_selling_price"][$count]),
 
 		  );
-		$q2 = $this->db->insert_string('ice_cream_sales_order', $data2);
+		$q2 = $this->db->insert_string('medicine_order', $data2);
 		$qty_left = (int)trim($data["qty_stocked"][$count]) - (int)trim($data["order_item_quantity"][$count]);
 		$sold_total = (int)trim($data["quantity_sold"][$count]) + (int)trim($data["order_item_quantity"][$count]);
 		$qty_data = array('quantity_in_stock' => $qty_left, 'quantity_sold' => $sold_total);
@@ -93,7 +93,7 @@ class Ice_Cream_Sales extends CI_Model {
 			'total_cost_price'       =>  trim($_POST["total_cost_price"][$count]),
 			'total_selling_price'    =>  trim($_POST["total_selling_price"][$count]));
 			
-			$q2 = $this->db->insert_string('ice_cream_sales_order', $data2);
+			$q2 = $this->db->insert_string('medicine_order', $data2);
 			$qty_left = (int)trim($_POST["qty_stocked"][$count]) - (int)trim($_POST["order_item_quantity"][$count]);
 			$sold_total = (int)trim($_POST["order_item_quantity"][$count]);
 			$qty_data = array('quantity_in_stock' => $qty_left, 'quantity_sold' => $sold_total);

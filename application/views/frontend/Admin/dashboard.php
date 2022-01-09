@@ -5,7 +5,8 @@
 <div class="row">
 	<div class="col-xl-6 col-md-6">
 		<div class="card bg-primary text-white mb-4">
-			<div class="card-body">Ice-cream Profit: [&#8358;<span id="ice_cream"></span>] ---- ----[VAT: &#8358;<span id="vat"> </span>]</div>
+			<div class="card-body">Medicine Profit: <!--[&#8358;-->
+				<span id="ice_cream"></span><!--] ---- ----[VAT: &#8358;--><span id="vat"> </span><!--]--></div>
 			<div class="card-footer d-flex align-items-center justify-content-between">
 				<a class="small text-white stretched-link" href="<?php echo base_url(); ?>admin/ice_cream">View Details</a>
 				<div class="small text-white"><i class="fa fa-angle-right"></i></div>
@@ -14,7 +15,7 @@
 	</div>
 	<div class="col-xl-6 col-md-6">
 		<div class="card bg-success text-white mb-4">
-			<div class="card-body">Stationary Profit: &#8358;<span id="stationary"></span></div>
+			<div class="card-body">Medical appliances Profit:<span id="stationary"></span></div>
 			<div class="card-footer d-flex align-items-center justify-content-between">
 				<a class="small text-white stretched-link" href="<?php echo base_url(); ?>admin/stationary">View Details</a>
 				<div class="small text-white"><i class="fa fa-angle-right"></i></div>
@@ -27,7 +28,7 @@
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fa fa-chart-bar mr-1"></i>
-				Monthly IceCream Revenue Chart
+				Monthly Medicine Revenue Chart
 			</div>
 			<div class="card-body"><canvas id="ice_cream_chart" width="100%" height="40"></canvas></div>
 		</div>
@@ -36,7 +37,7 @@
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fa fa-chart-bar mr-1"></i>
-				Monthly Stationary Revenue Chart
+				Monthly Medical appliances Revenue Chart
 			</div>
 			<div class="card-body"><canvas id="stationary_chart" width="100%" height="40"></canvas></div>
 		</div>

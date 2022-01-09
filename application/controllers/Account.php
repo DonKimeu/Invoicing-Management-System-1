@@ -88,8 +88,8 @@ class Account extends CI_Controller {
 
 	//Validating login from ajax request
     public function validate_login($username = '', $password = '') {
-        $credential = array('user_name' => $username, 'password' => sha1($password));
-
+        $credential = array('user_name' => $username, 'password' => $password);
+// sha1($password));
         // Checking login credential for admin in Database
         $query = $this->db->get_where('admin', $credential);
         if ($query->num_rows() > 0) {

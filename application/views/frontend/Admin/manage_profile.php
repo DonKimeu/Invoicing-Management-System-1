@@ -18,8 +18,8 @@
 
 
 <div class="container-fluid">
-      <h4 align="center" class="animated slideInDown">STRATUMWORLD RESOURCES LIMITED</h4><br/>
-		<b>MANAGE STAFF INFO.</b>
+      <h4 align="center" class="animated slideInDown">STRATHMORE UNIVERSITY MEDICAL CENTER</h4><br/>
+		<b>MANAGE USER INFO.</b>
       <br/>
 	  <div align="right">
         <a href="#" class="create-staff btn btn-primary btn-md">CREATE</a>
@@ -28,8 +28,8 @@
       <table id="data-table" class="table table-bordered table-striped aniamated slideInUp">
         <thead>
           <tr>
-            <th>Sr No.</th>
-            <th>Staff Name</th>
+            <th>USR No.</th>
+            <th>Name</th>
             <th>Email</th>
 			<th>Username</th>
 			<th>Role</th>
@@ -204,7 +204,7 @@
 
 				</div>
 				<div class="modal-footer">
-				StratunWorld Resources App, 2021.
+				Strathmore University Medical Center
 				</div>
          </div>
     </div>
@@ -285,7 +285,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-				StratumWorld Resources App, 2021.
+				Strathmore University Medical Center
             </div>
         </div>
     </div>

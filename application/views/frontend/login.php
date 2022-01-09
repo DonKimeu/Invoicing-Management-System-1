@@ -36,7 +36,7 @@
 					</div>
 				<form id="logForm" class="login">
 					<fieldset>
-						<legend class="legend"><span class="fa fa-lock fa-2x"></span> Login</legend>
+						<legend class="legend"><span class="fa fa-lock fa-2x"></span> Login </legend>
 							<div class="panel-body">
 								<div id="messages"></div>
 								<div class="input">

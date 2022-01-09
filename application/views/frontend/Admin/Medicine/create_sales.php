@@ -87,16 +87,16 @@
 						<input type="number" name="order_item_quantity[]" id="order_item_quantity1" data-srno="1" class="form-control input-sm order_item_quantity" required />
 					</td>
 					<td>
-						<input type="number" name="unit_price[]" id="unit_price1" placeholder="&#8358;" data-srno="1" class="form-control input-sm unit_price" readonly required />
+						<input type="number" name="unit_price[]" id="unit_price1" placeholder="" data-srno="1" class="form-control input-sm unit_price" readonly required />
 					</td>
 					<td>
-						<input type="number" name="selling_price[]" id="selling_price1" placeholder="&#8358;" data-srno="1" class="form-control input-sm selling_price" required readonly />
+						<input type="number" name="selling_price[]" id="selling_price1" placeholder="" data-srno="1" class="form-control input-sm selling_price" required readonly />
 					</td>
 					<td>
-						<input type="number" name="total_cost_price[]" id="total_cost_price1" placeholder="&#8358;" data-srno="1" class="form-control input-sm total_cost_price" readonly />
+						<input type="number" name="total_cost_price[]" id="total_cost_price1" placeholder="" data-srno="1" class="form-control input-sm total_cost_price" readonly />
 					</td>
 					<td>
-						<input type="number" name="total_selling_price[]" id="total_selling_price1" placeholder="&#8358;" data-srno="1" class="form-control input-sm total_selling_price" readonly />
+						<input type="number" name="total_selling_price[]" id="total_selling_price1" placeholder="" data-srno="1" class="form-control input-sm total_selling_price" readonly />
 						<input type="hidden" name="qty_left[]" id="qty_left1" class="form-control input-sm" />
 						<input type="hidden" name="qty_stocked[]" id="qty_stocked1" class="form-control input-sm" />
 						<input type="hidden" name="quantity_sold[]" id="quantity_sold1" class="form-control input-sm" />
@@ -110,19 +110,19 @@
 		<tr>
 			<div class="row" style="margin: 10px 15px;">
 				<b class="col-md-4">Grand Total Selling Price: </b>
-			    <input type="number" name="final_amt" id="final_amt" class="form-control col-md-8 input-sm final_amt" placeholder="&#8358;" readonly required >
+			    <input type="number" name="final_amt" id="final_amt" class="form-control col-md-8 input-sm final_amt" placeholder="" readonly required >
 			</div>
 		</tr>
 		<tr>
 			<div class="row" style="margin: 10px 15px;">
 				<b class="col-md-4">Cash Paid:</b>
-				<input type="number" name="cash_paid" id="cash_paid" class="form-control col-md-8 input-sm cash_paid" placeholder="&#8358;" required />
+				<input type="number" name="cash_paid" id="cash_paid" class="form-control col-md-8 input-sm cash_paid" placeholder="Enter the amount paid" required />
 			</div>
 		</tr>
 		<tr>
 			<div class="row" style="margin: 10px 15px;">
 				<b class="col-md-4">Balance:</b>
-				<input type="number" name="balance" id="balance" class="form-control col-md-8 input-sm balance" placeholder="&#8358;" readonly required />
+				<input type="number" name="balance" id="balance" class="form-control col-md-8 input-sm balance" placeholder="" readonly required />
 			</div>
 		</tr>
 		<tr>

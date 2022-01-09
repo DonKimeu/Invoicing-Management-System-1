@@ -1,8 +1,8 @@
 <div class="row">
 	<div class="col-md-12" style="margin-top:15px; font-size:16px;">
 		<?php
-        $success_msg = $this->session->flashdata('stationary_success_msg');
-        $error_msg  = $this->session->flashdata('stationary_error_msg');
+        $success_msg = $this->session->flashdata('ice_cream_success_msg');
+        $error_msg  = $this->session->flashdata('ice_cream_error_msg');
         if($success_msg){
             echo $success_msg;
         }
@@ -15,14 +15,14 @@
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
+
 <div class="container-fluid">
-      <h4 align="center" class="animated fadeInDown">Strathmore University Medical Center</h4><br/>
-		<b>CASH INVOICE</b>
+		<h4 align="center" class="animated fadeInDown">STRATHMORE UNIVERSITY MEDICAL CENTER</h4><br/>
       <br />
-      <div align="right">
-        <a href="<?php echo base_url();?>admin/create_stationary/" class="btn btn-primary btn-md">CREATE</a>
+	  <div align="right">
+        <a href="<?php echo base_url();?>admin/create_ice_cream/" class="create-supplier btn btn-primary btn-md">CREATE</a>
       </div>
-      <br/>
+	  <br/>
       <table id="data-table" class="table table-bordered table-striped display animated fadeInUp" style="width:100%;">
         <thead>
           <tr>
@@ -32,10 +32,9 @@
             <th width="15%">Profit</th>
 			<th width="15%">Cash Paid</th>
 			<th width="15%">Balance</th>
-			<th width="4%">Print</th>
-            <th width="4%">Show</th>
-            <th width="4%">Edit</th>
-            <th width="4%">Delete</th>
+			<th></th>
+			<th></th>
+			<th></th>
           </tr>
         </thead>
         <?php
@@ -46,35 +45,34 @@
 			foreach ($get_data as $row)
 			{ ?>
 				  <tr>
-					<td><?=$no++; ?></td>
+					<td><?=$no++?></td>
 					<td><?=number_format($row["total_cost_price"], 2, ".", ",")?></td>
 					<td><?=number_format($row["total_selling_price"], 2, ".", ",")?></td>
 					<td><?=number_format($row["profit"], 2, ".", ",")?></td>
 					<td><?=number_format($row["cash_paid"], 2, ".", ",")?></td>
-					<td><?=number_format($row["total_selling_price"] - $row["cash_paid"], 2, ".", ",")?></td>
-					<td class="text-center"><a href="print_invoice/<?=$row["order_id"]?>" class="btn btn-primary btn-sm"><i class="fa fa-book"></i></a></td>
-					<td class="text-center">
-						<a href="#" class="show_stationary btn btn-info btn-sm" data-id="<?=$row['sales_code']?>" data-date="<?=$row['payment_date']?>">
+					<td><?=number_format($row["balance"], 2, ".", ",")?></td>
+					<td class="text-center"><a href="#" class="show_ice_cream btn btn-info btn-sm"
+							data-id="<?=$row['sales_code']?>"
+                            data-vendor="<?=$row['vendor_id']?>"
+                            data-date="<?=$row['payment_date']?>">
 							<i class="fa fa-eye"></i>
 						</a>
 					</td>
 					<td class="text-center">
-						<a href="update_stationary/<?=$row["id"]?>" class="edit-stationary btn btn-primary btn-sm" ><i class="fa fa-edit"></i></a>
+						<a href="update_ice_cream/<?=$row["id"]?>" class="edit-appointment btn btn-primary btn-sm" ><i class="fa fa-edit"></i></a>
 					</td>
-					<td class="text-center"><a href="stationary/delete/<?=$row["id"]?>" class="delete-stationary btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a></td>
+					<td><a href="ice_cream/delete/<?=$row["id"] ?>" class="delete-ice-cream btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a></td>
 				  </tr>
-				<?php 
+			<?php 
 			}
 		}else {
-			echo '<tr><td colspan="8">No Stationary Data Entry</td><tr>';
+			echo '<tr><td colspan="8">No Ice-Cream Data Entry</td><tr>';
 		}
         ?>
       </table>
 </div>
-<br>
-
-<!-- Modal Form show stationary -->
-<div id="show_stationary" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Form show Ice-Cream -->
+<div id="show_ice_cream" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 		<div class="modal-header">
@@ -89,23 +87,28 @@
 		  		<span id="s-id"></span>
             </div>
             <div class="form-group">
-				<label class="col-md-4" for="">Payment-Date:</label>
+				<label class="col-md-4" for="">Vendor:</label>
+		  		<span id="s-vendor"></span>
+            </div>
+			<div class="form-group">
+				<label class="col-md-4" for="">Payment Date:</label>
 		  		<span id="s-date"></span>
             </div>
         </div>
 		<div class="modal-footer">
-			   Strathmore Medical Center
+				Strathmore University Medical Center
 		  </div>
          </div>
     </div>
 </div>
-<script type="text/javascript">
+<script type="application/javascript">
     //Delete Content
-	$(document).on('click', '.delete-stationary', function(){
+	$(document).on('click', '.delete-ice-cream', function(){
       var id = $(this).attr("id");
 		  if(confirm("Are you sure you want to remove this?"))
 		  {
-			window.location.href = base_url("admin/stationary");
+			window.location.href = base_url("admin/ice_cream");
+			toastr.success('Delete Sales', 'Data Deleted Successfully!!!', {timeOut: 5000});
 		  }
 		  else
 		  {
@@ -113,11 +116,12 @@
 		  }
     });
 
-	//show modal for stationary
-	$(document).on('click', '.show_stationary', function() {
-		$('#show_stationary').modal('show');
+	//show modal for Ice-Cream
+	$(document).on('click', '.show_ice_cream', function() {
+		$('#show_ice_cream').modal('show');
 		$('#s-id').text($(this).data('id'));
+		$('#s-vendor').text($(this).data('vendor'));
 		$('#s-date').text($(this).data('date'));
-		$('.modal-title').text('Stationary Data Information');
+		$('.modal-title').text('Ice-Cream Data Information');
 	});
 </script>
